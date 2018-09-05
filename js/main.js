@@ -1,4 +1,8 @@
 !function() {
+  $("#review").on("click", () => {
+      window.location.reload(false)
+      console.log(0)
+  });
   let duration = 50;
   $(".buttons").on("click", "button", function(e) {
     let $clicked = $(e.currentTarget);

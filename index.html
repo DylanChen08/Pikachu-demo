@@ -12,9 +12,9 @@
 
 <body>
     <section class="buttons">
-        <button>低速</button>
-        <button>中速</button>
-        <button>快速</button>                   
+        <button data-speed="low">低速</button>
+        <button class="active" data-speed="normal">正常</button>
+        <button data-speed="fast">快速</button>
     </section>
     <section class="code-wrapper">
         <pre id="code">
@@ -37,5 +37,7 @@
         </div>
     </div>
 </body>
+
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script>
 <script src="./js/main.js"></script>
 </html>

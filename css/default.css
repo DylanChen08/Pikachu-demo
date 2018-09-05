@@ -11,7 +11,6 @@
   box-sizing: border-box;
 }
 body {
-  border: 1px solid #ffdc2b;
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -30,6 +29,17 @@ body {
 }
 .buttons > button {
   margin: 5px 0;
-  padding: 5px;
-  background: #ddd;
+  padding: .375rem .75rem;
+  white-space: nowrap;
+  vertical-align: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  border: 1px solid transparent;
+}
+.active{
+  color: #fff;
+  background-color: #17a2b8;
+  border-color: #17a2b8;
 }

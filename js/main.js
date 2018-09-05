@@ -1,19 +1,43 @@
 !function() {
+  let duration = 50;
+  $(".buttons").on("click", "button", function(e) {
+    let $clicked = $(e.currentTarget);
+    var speed = $clicked.attr("data-speed");
+    console.log(speed);
+    $clicked
+      .addClass("active")
+      .siblings(".active")
+      .removeClass("active");
+
+    switch (speed) {
+      case "slow":
+        duration = 100;
+        break;
+      case "normal":
+        duration = 50;
+        break;
+      case "fast":
+        duration = 10;
+        break;
+    }
+  });
+
   function writeCodes(prefix, code, fn) {
     let container = document.querySelector("#code");
     let styleTag = document.querySelector("#styleTag");
     let n = 0;
 
-    let interval = setInterval(() => {
+    setTimeout(function run() {
       n = n + 1;
       container.innerHTML = code.substring(0, n);
       styleTag.innerHTML = code.substring(0, n);
-      container.scrollTop=container.scrollHeight;
-      if (n > code.length) {
-        window.clearInterval(interval);
+      container.scrollTop = container.scrollHeight;
+      if (n < code.length) {
+        setTimeout(run, duration);
+      } else {
         fn && fn.call();
       }
-    }, 1);
+    }, duration);
   }
 
   let code = `
@@ -23,7 +47,6 @@
    *
    */
 body {
-    border: 1px solid #ffdc2b;
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -31,7 +54,6 @@ body {
 .code-wrapper {
     flex: 1;
     height: 50%;
-    border: 1px solid red;
 }
 /*
  *给画板一个颜色
@@ -39,7 +61,6 @@ body {
 .preview-wrapper {
     flex: 1;
     height: 50%;
-    border: 1px solid red;
     display: flex;
     align-items: center;
     justify-content: center;

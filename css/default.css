@@ -40,6 +40,7 @@ body {
   border: 1px solid transparent;
   border-radius: .25rem;
   font-size: .75rem;
+  outline: 0;
 }
 .active {
   color: #fff;
@@ -47,18 +48,8 @@ body {
   border-color: #17a2b8;
 }
 .buttons > a {
-  margin: 5px 0;
-  padding: 0.375rem 0.75rem;
-  white-space: nowrap;
-  vertical-align: middle;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  border: 1px solid transparent;
   color: #fff;
   background-color: #28a745;
   border-color: #28a745;
   border-radius: .25rem;
-  font-size: .75rem;
 }

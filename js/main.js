@@ -239,7 +239,7 @@ body {
 
 /*
  *好了，皮卡丘画好了，谢谢观赏
- *Power By Ease
+ *Power By DC
  * 
  */
  `;

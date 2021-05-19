@@ -2,3 +2,4 @@
 
 [点我预览](https://DylanChen08.github.io/Pikachu-demo/index.html)
 
+![image](https://github.com/DylanChen08/Pikachu-demo/blob/master/Demonstration.PNG)
